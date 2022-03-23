@@ -216,7 +216,7 @@ client.on('voiceStateUpdate' , (oldS , newS) => {
 
         const embed = new Discord.MessageEmbed()
                 .setTitle(`Now playing ${song.title}`)
-                .setColor('#DAF7A6')
+                .setColor('#FF2F4F4F')
                 .addFields(
                     {name: `From Bronx with love.`,
                     value: `${song.url} \n Queue's length ${serverQueue.songs.length}`}

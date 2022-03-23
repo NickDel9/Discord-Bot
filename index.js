@@ -1,3 +1,4 @@
+
 const Discord = require('discord.js');
 const ytdl = require('ytdl-core');
 
@@ -128,7 +129,7 @@ client.on("message", async(message) => {
                 serverQueue.songs.push(song);
                 const embed = new Discord.MessageEmbed()
                 .setTitle('The song has been added to Queue')
-                .setColor('#DAF7A6')
+                .setColor('#C27C0E')
                 .addFields(
                     {name: `${song.title}`,
                     value: `${song.url} \n Queue's length ${serverQueue.songs.length}`}
@@ -160,7 +161,7 @@ client.on("message", async(message) => {
     function skip (message, serverQueue){
 
         if(!message.member.voice.channel)
-            return message.channel.send("You need to join the voice chat first");
+            return message.channel.send("You need to join the voice chat first! Bronx city , real hood");
         if(!serverQueue || serverQueue.songs.length == 0)
             return message.channel.send("There is nothing to skip!");
         if (serverQueue.songs.length > 1){
@@ -174,7 +175,7 @@ client.on("message", async(message) => {
     function help(message){
         const embed = new Discord.MessageEmbed()
         .setTitle('Commands list')
-        .setColor('#DAF7A6')
+        .setColor('#11806A')
         .addFields(
             {name: 'Listening to',
             value: '!play or !p \n !stop \n !skip \n !leave'}
@@ -216,7 +217,7 @@ client.on('voiceStateUpdate' , (oldS , newS) => {
 
         const embed = new Discord.MessageEmbed()
                 .setTitle(`Now playing ${song.title}`)
-                .setColor('#FF2F4F4F')
+                .setColor('#11806A')
                 .addFields(
                     {name: `From Bronx with love.`,
                     value: `${song.url} \n Queue's length ${serverQueue.songs.length}`}

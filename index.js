@@ -1,4 +1,3 @@
-// const { executionAsyncResource } = require('async_hooks');
 const Discord = require('discord.js');
 const ytdl = require('ytdl-core');
 

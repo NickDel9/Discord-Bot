@@ -128,7 +128,7 @@ client.on("message", async(message) => {
             }else{
                 serverQueue.songs.push(song);
                 const embed = new Discord.MessageEmbed()
-                .setTitle('The song has been added to Queue')
+                .setTitle('The song added to Queue')
                 .setColor('#C27C0E')
                 .addFields(
                     {name: `${song.title}`,

@@ -83,7 +83,7 @@ client.on("message", async(message) => {
             else{
                 let result = await searcher.search(args.join(" "), { type: "video" || "audio"})
                 if (result.first == null){
-                    message.channel.send(`Unable to find related song for ${args[0]}. Katse kala`)
+                    message.channel.send(`Unable to find related song for ${args[0]}.`)
                     return
                 }
                 const songInfo = await  ytdl.getInfo(result.first.url)
@@ -219,7 +219,7 @@ client.on('voiceStateUpdate' , (oldS , newS) => {
                 .setTitle(`Now playing ${song.title}`)
                 .setColor('#11806A')
                 .addFields(
-                    {name: `From Bronx with love.`,
+                    {name: `Varia plati - Elafria trike. `,
                     value: `${song.url} \n Queue's length ${serverQueue.songs.length}`}
                 )
 
